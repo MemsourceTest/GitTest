@@ -1,0 +1,47 @@
+
+Our file archive is publicly available at either:
+
+	http://ftp.amigascne.org
+
+or
+
+	ftp://ftp.amigascne.org
+
+As well as from a number of mirrors all over the world. We highly recommend you
+use the mirror that is closest to you.
+
+If you would like to mirror the contents of the archives, we offer rsync access
+to do so. Mirroring via ftp is strictly prohibited. Furthermore, anonymous ftp
+connections are bandwith limited to 300 Kbps per connection and limited to two
+connections per IP. Approved mirrors must use rsync for mirroring and are not
+bandwidth limited.
+
+We have two different rsync modules available for your use:
+
+ftp     - contains only the amigascne specific archive (i.e. /pub/amiga)
+modland - contains the modland specific archive (i.e. /mirrors/ftp.modland.com)
+
+The rsync server requires authentication. Therefore if you have a dedicated
+server connected to the internet that is publicly accessible with at least
+100GB of free disk space (full mirror), with rsync installed then email
+cygnus[at]amigascne.org with your request. Do include your hostname and the
+servers geographical location as well as your intent to mirror amigascne and/or
+modland archives. Also please indicate whether you will make the mirror
+available by either HTTP or FTP or both.
+
+Once the request has been approved and you've received your account details, 
+you may mirror the desired archives as follows:
+
+amigascne archive only:
+
+	rsync -a --delete --delete-before ftp.amigascne.org::ftp/ \
+		/your/local/mirror/path/
+
+modland archive only:
+
+	rsync -a --delete --delete-before ftp.amigascne.org::modland/ \
+		/your/local/mirror/path/
+
+In addition, each mirror will receive a DNS alias within the amigascne.org
+domain.
+
