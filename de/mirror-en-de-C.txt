@@ -1,0 +1,47 @@
+
+Unser Archiv ist öffentlich zugänglich, entweder:
+
+	http://FTP.amigascne.org
+
+oder
+
+	http://FTP.amigascne.org
+
+Sowie eine Reihe von Spiegeln auf der ganzen Welt. Wir empfehlen Ihnen
+Verwenden Sie den Spiegel, der Ihnen am nächsten ist.
+
+Wenn Sie den Inhalt des Archivs spiegeln möchten, bieten wir Rsync Zugang
+um dies zu tun. Spiegelung über ftp ist strengstens untersagt. Andererseits anonymes ftp
+Verbindungen sind Bandbreiten bis 300 KBit/s pro Verbindung begrenzt und beschränkt auf zwei
+Verbindungen pro IP. Zugelassenen Spiegel muß für die Spiegelung Rsync verwenden und sind nicht
+Bandbreite begrenzt.
+
+Wir haben zwei verschiedene Rsync-Module zur Verfügung:
+
+FTP - enthält nur die Amigascne bestimmten Archiv (d. h./Pub/Amiga)
+Modland - enthält das Modland bestimmte Archiv (d.h. /mirrors/ftp.modland.com)
+
+Der Rsync-Server erfordert Authentifizierung. Daher haben Sie eine eigene
+Server verbunden, das Internet, das öffentlich zugängliche mit mindestens
+100GB freier Festplattenspeicher (volle Spiegelung), mit Rsync installiert dann e-Mail
+Cygnus[at]amigascne.org mit Ihrer Anfrage. Schließen Sie Ihr Hostname und die
+Server Standort sowie Ihre Absicht, Amigascne zu spiegeln und/oder
+Modland Archive. Bitte auch geben Sie an, ob Sie den Spiegel zu machen
+erhältlich von HTTP, FTP oder beides.
+
+Sobald der Antrag genehmigt wurde und Sie Ihre Kontodaten erhalten haben, 
+Sie können das gewünschte Archiv spiegeln, wie folgt:
+
+Amigascne Archiv nur:
+
+	Rsync - ein--Delete - löschen-vor ftp.amigascne.org::ftp/ \
+		/ Ihr/lokal/Spiegel/Path /
+
+Modland Archiv nur:
+
+	Rsync - ein--Delete - löschen-vor ftp.amigascne.org::ftp/ \
+		/ Ihr/lokal/Spiegel/Path /
+
+Darüber hinaus erhält jeder Spiegel einen DNS-Alias innerhalb der amigascne.org
+Domäne.
+
